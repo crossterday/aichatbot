@@ -1,10 +1,10 @@
-import bot from "../assets/bot.svg" ;
-import user from "../assets/user.svg" ; 
+import bot from "../assets/poke_ball_icon.png";
+import user from "../assets/user.svg"; 
 
 const form = document.querySelector("form");
 const chatContainer = document.querySelector("#chat_container");
 
-let loadInterval ;
+let loadInterval;
 
 function loader(element) {
     element.textContent = "" ;
@@ -18,6 +18,7 @@ function loader(element) {
     }, 300)
 }
 
+
 function typeText(element, text) {
     let index = 0 ;
 
@@ -25,9 +26,9 @@ function typeText(element, text) {
         if (index < text.length) {
             element.innerHTML += text.charAt(index) ;
             index++ ;
-        }   else {
+        } else {
             clearInterval(interval) ;
-        }
+        } 
     }, 20)
 }
 

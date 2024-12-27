@@ -1,30 +1,39 @@
-@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100;300;400;500;700;800;900&display=swap");
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Alegreya Sans", sans-serif;
+  font-family: "Glory", serif;
+  font-weight: 500;
+  font-style: normal;
+  font-optical-sizing: auto;
 }
 
 body {
-  background: #343541;
+  background: #5688B0;
+}
+
+#header {
+  margin-top: 16px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }
 
 #app {
   width: 100vw;
   height: 100vh;
-  background: #343541;
-
+  background: #5688B0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  padding-bottom: 24px;
+  border: 6px solid #0A1232;
 }
 
 #chat_container {
   flex: 1;
-  width: 100%;
+  width: 85%;
   height: 100%;
   overflow-y: scroll;
 
@@ -50,7 +59,11 @@ body {
 }
 
 .ai {
-  background: #40414F;
+  background: #CBC369;
+}
+
+.ai .message {
+  color: #352828;
 }
 
 .chat {
@@ -77,7 +90,11 @@ body {
 }
 
 .ai .profile {
-  background: #10a37f;
+  background: #0A1232;
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  
 }
 
 .profile img {
@@ -89,11 +106,12 @@ body {
 .message {
   flex: 1;
 
-  color: #dcdcdc;
+  color: #ebebeb;
   font-size: 20px;
 
   max-width: 100%;
   overflow-x: scroll;
+  font-weight: semibold;
 
   /*
    * white space refers to any spaces, tabs, or newline characters that are used to format the CSS code
@@ -113,15 +131,16 @@ body {
 }
 
 form {
-  width: 100%;
+  width: 95%;
   max-width: 1280px;
   margin: 0 auto;
   padding: 10px;
-  background: #40414F;
+  background: #212B53;
 
   display: flex;
   flex-direction: row;
   gap: 10px;
+  border-radius: 35px 35px 35px 35px;
 }
 
 textarea {
@@ -137,6 +156,11 @@ textarea {
   outline: none;
 }
 
+textarea::placeholder {
+  color: #C5C5C5;
+  font-weight: semibold;
+}
+
 button {
   outline: 0;
   border: 0;
@@ -145,6 +169,8 @@ button {
 }
 
 form img {
+  margin-top: 5px;
+  cursor: pointer;
   width: 30px;
   height: 30px;
 }
